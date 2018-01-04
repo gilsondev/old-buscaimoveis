@@ -1,6 +1,6 @@
 flask
 import_string
-pymongo==2.4.1
+pymongo
 tinymongo
 tinydb_serialization
 dynaconf
