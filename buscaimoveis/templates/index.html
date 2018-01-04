@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block main %}
+<!-- Search Form -->
+<form action="." method="POST">
+    {{ form.hidden_tag() }}
+    <!-- Search Field -->
+    <div class="row">
+        <h1 class="text-center">Busca Imóveis</h1>
+        <div class="form-group">
+            <div class="col-md-10">
+                {{ form.keywords(placeholder="Busque por cidade, bairro ou descrição", class="form-control input-lg") }}
+            </div>
+        </div>
+        <button class="btn btn-success btn-lg search-button" type="submit">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            Pesquisar
+        </button>
+    </div>
+    <div class="row">
+        <ul class="posts-box">
+            {% for sell in sells %}
+                <li>
+                    <div class="card">
+                        <a class="button link-image" href="{{ sell.url }}" target="_blank">
+                            <img src="{{ sell.image |
+                            default(url_for('static',
+                            filename='img/no-image.jpg'), True)}}" width="300"
+                            height="169" alt=""></a>
+                        <div>
+                            <h3><a href="{{ sell.url }}" target="_blank">{{ sell.title }}</a></h3>
+                            <p><strong>Valor: </strong>{{ sell.price | default('Sem valor', True) }}</p>
+                            <p><strong>Cidade: </strong>{{ sell.city | default('Sem cidade', True) }}</p>
+                            <p><strong>Bairro: </strong>{{ sell.district | default('Sem bairro', True) }}</p>
+                            <p><strong>Área: </strong>{{ sell.area | default('Sem área', True) }}</p>
+                        </div>
+                        <div>
+                            <p><strong>Proprietário: </strong> {{sell.owner | default('Sem nome', True)}}</p>
+                            <p><strong>Telefone: </strong> {{ sell.phone | default('Sem contato', True)}}</p>
+                        </div>
+                        <div>Venda localizada: <a href="{{ sell.url }}" target="_blank">OLX</a></div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</form>
+<!-- End of Search Form -->
+{% endblock main %}

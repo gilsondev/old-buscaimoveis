@@ -1,0 +1,3 @@
+*.py[co]
+.cache
+*.egg-info

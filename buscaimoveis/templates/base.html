@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Busca Imóveis{% endblock title %}
+
+{% block styles %}
+    {{super()}}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+{% endblock styles %}
+
+{% block content %}
+    <div class="container">
+        <div class="row div col-sm-12 col-md-12">
+            {% block main %} {% endblock main %}
+        </div>
+    </div>
+{% endblock content %}
