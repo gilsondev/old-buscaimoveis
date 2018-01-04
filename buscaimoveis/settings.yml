@@ -1,5 +1,5 @@
 BUSCAIMOVEIS:
-  DEBUG: true
+  DEBUG: false
   RELOADER: true
   SECRET_KEY: 's3cret'
   HOST: '0.0.0.0'
