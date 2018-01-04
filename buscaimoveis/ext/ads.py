@@ -23,11 +23,11 @@ def index():
                 {"district": {"$regex": form.keywords.data}}
             ]
         }).sort([
-            ("created_at", pymongo.ASCENDING)
+            ("created_at", pymongo.DESCENDING)
         ]).limit(LIMIT_SELLS)
     else:
         sells = current_app.db.properties.find().sort([
-            ("created_at", pymongo.ASCENDING)
+            ("created_at", pymongo.DESCENDING)
         ]).limit(LIMIT_SELLS)
 
     return render_template('index.html', sells=sells, form=form)
