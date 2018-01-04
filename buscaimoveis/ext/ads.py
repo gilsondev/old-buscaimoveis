@@ -1,9 +1,14 @@
+import pymongo
+
 from flask import Blueprint, render_template, current_app
 from flask_wtf import FlaskForm
 from wtforms import fields
 
 
 ads_blueprint = Blueprint('ads', __name__, template_folder='template')
+
+
+LIMIT_SELLS = 30
 
 
 @ads_blueprint.route('/', methods=['GET', 'POST'])
@@ -17,9 +22,13 @@ def index():
                 {"city": {"$regex": form.keywords.data}},
                 {"district": {"$regex": form.keywords.data}}
             ]
-        })
+        }).sort([
+            ("created_at", pymongo.DESCENDING)
+        ]).limit(LIMIT_SELLS)
     else:
-        sells = current_app.db.properties.find()
+        sells = current_app.db.properties.find().sort([
+            ("created_at", pymongo.DESCENDING)
+        ]).limit(LIMIT_SELLS)
 
     return render_template('index.html', sells=sells, form=form)
 

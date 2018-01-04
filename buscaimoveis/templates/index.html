@@ -30,15 +30,18 @@
                         <div>
                             <h3><a href="{{ sell.url }}" target="_blank">{{ sell.title }}</a></h3>
                             <p><strong>Valor: </strong>{{ sell.price | default('Sem valor', True) }}</p>
-                            <p><strong>Cidade: </strong>{{ sell.city | default('Sem cidade', True) }}</p>
                             <p><strong>Bairro: </strong>{{ sell.district | default('Sem bairro', True) }}</p>
+                            <p><strong>Cidade: </strong>{{ sell.city | default('Sem cidade', True) }}</p>
                             <p><strong>Área: </strong>{{ sell.area | default('Sem área', True) }}</p>
                         </div>
                         <div>
                             <p><strong>Proprietário: </strong> {{sell.owner | default('Sem nome', True)}}</p>
                             <p><strong>Telefone: </strong> {{ sell.phone | default('Sem contato', True)}}</p>
                         </div>
-                        <div>Venda localizada: <a href="{{ sell.url }}" target="_blank">OLX</a></div>
+                        <div>
+                            <p>Postado em: {{ sell.posted_at }}</p>
+                            <p>Venda localizada: <a href="{{ sell.url }}" target="_blank">OLX</a></p>
+                        </div>
                     </div>
                 </li>
             {% endfor %}
