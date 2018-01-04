@@ -1,6 +1,6 @@
 flask
 import_string
-pymongo
+pymongo==3.6.0
 dynaconf
 awesome_slugify
 mistune
