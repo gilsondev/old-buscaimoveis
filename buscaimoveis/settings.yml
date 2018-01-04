@@ -14,7 +14,7 @@ BUSCAIMOVEIS:
     - buscaimoveis.ext.ads.configure
     - flask_bootstrap.Bootstrap
 
-  DEBUG_TOOLBAR_ENABLED: true
+  DEBUG_TOOLBAR_ENABLED: false
   DEBUG_TB_INTERCEPT_REDIRECTS: false
   DEBUG_TB_PROFILER_ENABLED: true
   DEBUG_TB_TEMPLATE_EDITOR_ENABLED: true
