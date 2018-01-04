@@ -3,7 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import fields
 
 
-ads_blueprint = Blueprint('blog', __name__, template_folder='template')
+ads_blueprint = Blueprint('ads', __name__, template_folder='template')
 
 
 @ads_blueprint.route('/', methods=['GET', 'POST'])
