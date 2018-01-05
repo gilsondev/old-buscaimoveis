@@ -2,5 +2,5 @@ from flask_debugtoolbar import DebugToolbarExtension
 
 
 def configure(app):
-    if app.config.get('DEBUG_TOOLBAR_ENABLED'):
+    if app.config.get('DEBUG_TB_ENABLED'):
         DebugToolbarExtension(app)
