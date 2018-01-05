@@ -39,7 +39,14 @@
                             </div>
                             <div>
                                 <p><strong>Proprietário(a): </strong> {{sell.owner | default('Sem nome', True)}}</p>
-                                <p><strong>Telefone: </strong> {{ sell.phone | default('Sem contato', True)}}</p>
+                                {% if sell.phone %}
+                                    <p>
+                                        <strong>Telefone: </strong>
+                                        <a href="tel:{{ sell.phone }}">{{ sell.phone }}</a>
+                                    </p>
+                                {% else %}
+                                    <p><strong>Telefone: </strong> Sem contato</p>
+                                {% endif %}
                             </div>
                             <div>
                                 <p>Postado em: {{ sell.posted_at }}</p>
