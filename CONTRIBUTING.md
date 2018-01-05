@@ -39,4 +39,4 @@ Se você propôr uma nova funcionalidade:
 
 Explique em detalhes como ele deverá funcionar
 Mantenha o mais simples possível, para facilitar a implementação
-Lembre que esse projeto é digido por meio de contribuições, então implementações são bem vindas :)
+Lembre que esse projeto é dirigido por meio de contribuições, então implementações são bem vindas :)
