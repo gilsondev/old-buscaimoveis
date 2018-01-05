@@ -1,0 +1,26 @@
+{
+  "short_name": "BuscaImoveis",
+  "name": "Busca Imóveis",
+  "icons": [
+    {
+      "src": "/static/img/logo_48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/static/img/logo_96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/static/img/logo_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "theme_color": "#5fbcd3",
+  "background_color": "#5fbcd3",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -6,8 +6,12 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #FFCC80;
+  background: #5fbcd3;
   color: #444444;
+}
+
+h1 {
+    color: #FFFFFF;
 }
 
 /* Cards */
