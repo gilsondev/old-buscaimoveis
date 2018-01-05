@@ -10,9 +10,13 @@ BUSCAIMOVEIS:
   EXTENSIONS:
     - buscaimoveis.ext.database.configure
     - buscaimoveis.ext.auth.configure
+    - buscaimoveis.ext.analytics.configure
     - buscaimoveis.ext.debug.configure
     - buscaimoveis.ext.ads.configure
     - flask_bootstrap.Bootstrap
+
+  ANALYTICS_ENABLED: false
+  ANALYTICS_SITE_ID: ''
 
   DEBUG_TB_ENABLED: false
   DEBUG_TB_INTERCEPT_REDIRECTS: false

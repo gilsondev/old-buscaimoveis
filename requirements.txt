@@ -18,3 +18,4 @@ flask_debugtoolbar
 mongomock
 
 -e .
+Flask-Analytics==0.6.0
