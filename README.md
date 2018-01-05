@@ -9,7 +9,7 @@ Em breve para os seguintes serviços:
  - ZAP Imóveis
  - Viva Real
 
-Todos os anúncios são coletados via crawling usando o [Busca Imóveis Scraper].
+Todos os anúncios são coletados via crawling usando o [Busca Imóveis Scraper](https://github.com/gilsondev/buscaimoveis-scraper).
 
 
 ## Instalação

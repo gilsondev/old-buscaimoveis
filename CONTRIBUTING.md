@@ -31,10 +31,6 @@ Se você viu a documentação e percebe que pode explicar melhor, colocar mais i
 
 Fica aberto também a criação de tutoriais e posts pela web, relacionado ao projeto, que possa acrescentar no seu uso.
 
-### Buscando novas fontes de dados
-
-O projeto tem o objetivo de centralizar informações dos candidatos, por meio de busca de portais, dados abertos, etc. Se você encontrou mais alguma fonte confiável e que não proibe a coleta delas, crie uma Issue ou mande o seu Pull Request, para analisarmos. Sendo uma fonte que possa enriquecer na pesquisa, nós integraremos no codebase.
-
 ### Enviando seu feedback
 
 A melhor forma de enviar feedback é por meio das [Issues](https://github.com/gilsondev/buscaimoveis/issues).
