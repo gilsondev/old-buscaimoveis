@@ -8,7 +8,7 @@ app = create_app(__name__)
 
 @click.group()
 def main():
-    """Main Group"""
+    """Busca Imóveis APP"""
     pass
 
 
@@ -16,7 +16,11 @@ def main():
 def shell():
     """Open a shell with app in the context"""
     with app.app_context():
-        code.interact(banner='Busca Imoveis APP', local={'app': app})
+        try:
+            from IPython import start_ipython
+            start_ipython(argv=[], user_ns={'app': app})
+        except:
+            code.interact(banner='Busca Imóveis', local={'app': app})
 
 
 @main.command()
@@ -27,20 +31,3 @@ def shell():
 def runserver(debug, reloader, host, port):
     """Run the server with dev/debug mode"""
     app.run(debug=debug, use_reloader=reloader, host=host, port=port)
-
-
-@main.command()
-@click.option('--username', prompt=True, required=True)
-@click.option('--password', prompt=True, required=True, hide_input=True,
-              confirmation_prompt=True)
-def adduser(username, password):
-    """Create a new user"""
-    with app.app_context():
-        try:
-            with app.app_context():
-                app.db.create_user(username, password)
-        except Exception as e:
-            click.echo(f'Could not create a user {username}')
-            raise
-        else:
-            click.echo(f"User {username} created successfully!")

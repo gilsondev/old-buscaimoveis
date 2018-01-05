@@ -82,6 +82,12 @@ h1 {
   margin-top: -5px;
 }
 
+.message {
+    text-align: center;
+    padding-top: 30px;
+    color: #FFF;
+}
+
 @-webkit-keyframes modalbox {
   0% {
     top: -250px;

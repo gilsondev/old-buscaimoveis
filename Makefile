@@ -13,7 +13,7 @@ pep8: ## check style with flake8
 	flake8 buscaimoveis tests
 
 test: pep8 ## run tests quickly with the default Python
-	py.test -v
+	python setup.py test
 
 install: clean test ## install the package to the active Python's site-packages
 	python setup.py develop
